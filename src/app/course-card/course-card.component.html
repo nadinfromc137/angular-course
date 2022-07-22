@@ -1,12 +1,12 @@
 <div class="course-card">
 
     <div class="course-title">
-        {{ e3terefbeya.description}}
+        {{ cardIndex + ' ' + course.description}}
     </div>
-    <img width="300" alt="Angular Logo" [src]="e3terefbeya.iconUrl">
+    <img width="300" alt="Angular Logo" [src]="course.iconUrl">
 
     <div class="course-description">
-        {{e3terefbeya.longDescription}}
+        {{course.longDescription}}
     </div>
 
     <button (click)="courseClicked()">View Course</button>

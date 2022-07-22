@@ -13,8 +13,11 @@ import { Course } from '../model/course';
 export class CourseCardComponent implements OnInit {
 
   @Input()
-  e3terefbeya:Course;
+  course:Course;
 
+  @Input()
+  cardIndex:number;
+  
   @Output()
   courseSelected = new EventEmitter<Course>();
 
@@ -28,7 +31,7 @@ export class CourseCardComponent implements OnInit {
   }
 
   catchEventEmitter(){
-    this.courseSelected.emit(this.e3terefbeya);
+    this.courseSelected.emit(this.course);
     console.log('Emitted course event')
   }
 

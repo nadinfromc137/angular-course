@@ -9,11 +9,14 @@ import { Course } from './model/course';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  coreCourses =  COURSES[0];
-  secondCourse = COURSES[1];
-  thirdCourse = COURSES[2];
 
-  catchEventEmitter(e3terefbeya:Course){
-      console.log('App component description', e3terefbeya.longDescription);
+  courses = COURSES;
+  //coreCourses =  COURSES[0];
+  //secondCourse = COURSES[1];
+  //thirdCourse = COURSES[2];
+
+  catchEventEmitter(course:Course, isFirst: boolean){
+      console.log('App component description', course.longDescription);
+      console.log('is first: ', isFirst);
   }
 }

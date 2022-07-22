@@ -38,8 +38,8 @@ button {
 }
 
 course-card.is-first {
-  border-top: 2px solid grey;
-  padding-top: 20px;
+  border-top: 5px solid rgb(225, 8, 8);
+  padding-top: 25px;
 }
 
 course-card.is-last {
