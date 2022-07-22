@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
 import {COURSES} from '../db-data';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import {COURSES} from '../db-data';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
-
-
+  coreCourses =  COURSES[0];
+  secondCourse = COURSES[1];
+  thirdCourse = COURSES[2];
 }
