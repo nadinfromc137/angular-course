@@ -17,7 +17,7 @@ export class CourseCardComponent implements OnInit {
 
   @Input()
   cardIndex:number;
-  
+
   @Output()
   courseSelected = new EventEmitter<Course>();
 
@@ -35,5 +35,9 @@ export class CourseCardComponent implements OnInit {
     console.log('Emitted course event')
   }
 
+  isDescription(){
+    console.log('Inisdesc', this.course.longDescription);
+    return this.course && this.course.longDescription;
+  }
 
 }

@@ -1,16 +1,32 @@
-<div class="course-card">
+<!--
+    Starts counting at 2 bc we added undefined object
+    which gives errors
+    so for this div container below we added ngIf that only creates a div container if the course is defined 
+    thus the counting starts from the second course object
+-->
+
+<!--
+    elvis operator is the ? in course?.description
+    if description is null will show undefined in the page
+    we dont like elvis that much, beter avoid
+-->
+<div class="course-card" *ngIf="course">
 
     <div class="course-title">
-        {{ cardIndex + ' ' + course.description}}
+        {{ cardIndex + ' ' + course?.description}}
     </div>
-    <img width="300" alt="Angular Logo" [src]="course.iconUrl">
+    <img width="300" alt="Angular Logo" [src]="course.iconUrl" *ngIf="course.iconUrl; else ngtemplatename;">
 
-    <div class="course-description">
+    <ng-template #ngtemplatename>
+        <p>Optionally displaying using ng-template and ngIf</p>
+    </ng-template>
+
+    <div class="course-description" *ngIf="isDescription(); else ngtemplatename;">
         {{course.longDescription}}
     </div>
 
     <button (click)="courseClicked()">View Course</button>
 
-    <button (click)="catchEventEmitter()">Using Event Emitter</button>
+    <!-- <button (click)="catchEventEmitter()">Using Event Emitter</button> -->
 
 </div>
