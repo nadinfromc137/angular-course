@@ -17,12 +17,12 @@
   <table>
     <tr style="padding: 5px">
       <td style="padding: 5px">
-        <course-card [e3terefbeya]="coreCourses"></course-card>
+        <course-card (courseSelected)="catchEventEmitter($event)" [e3terefbeya]="coreCourses"></course-card>
       </td>
       <td style="padding: 5px">
-        <course-card [e3terefbeya]="thirdCourse"></course-card>
+        <course-card  (courseSelected)="catchEventEmitter($event)"  [e3terefbeya]="thirdCourse"></course-card>
       </td>
     </tr>
   </table>
-  <course-card [e3terefbeya]="secondCourse"></course-card>
+  <course-card  (courseSelected)="catchEventEmitter($event)" [e3terefbeya]="secondCourse"></course-card>
 </div>
